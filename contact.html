@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact us</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link rel="shortcut icon" href="images/logos/LOGO.png">
+</head>
+
+<body>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="registration.html">Registration</a>
+    <a href="about.html">About</a>
+    <a href="regis.html">Already<br>registered</a>
+</div>
+
+<span onclick="openNav()" class="big">&#9776; open</span>
+
+<div class="logo" id="logo">
+    <a href="index.html"><img src="images/logos/LOGO.png" alt="logo" height="125px" width="125px"></a>
+</div>
+<div id="contact" class="contact">
+    <header class="mainHead">
+        <h1>Contact us</h1>
+    </header>
+    <footer class="mainFoot">
+        <p>Our contact information is given below</p>
+    </footer>
+    <form action="">
+        <input class="input" type="text" size="37" placeholder="Name" name="name" value="" autocomplete="off"><br>
+        <input class="input" type="email" size="37" placeholder="Email" name="name" value="" autocomplete="off"><br>
+
+        <label>
+            <select name="lang">
+                <option class="input hidden" selected> Select Language used
+                <option class="input" value="cpp"> CPP
+                <option class="input" value="html"> HTML
+                <option class="input" value="csharp"> C#
+            </select>
+        </label>
+        <br>
+        <label for="com"></label><textarea name="com" id="com" placeholder="Enter your comments"></textarea>
+    </form>
+</div>
+<div id="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.479960071537!2d67.09062781437223!3d24.91571434917839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f32a0f2c3f3%3A0x4fc0a6fd386117f0!2sSir+Syed+University+of+Engineering+and+Technology!5e0!3m2!1sen!2s!4v1477753832271"
+            width="690" height="590" frameborder="0" style="border:0; border-radius: 5px;" allowfullscreen></iframe>
+</div>
+<div id="foot">
+    <h1>By <br><span>Sir Syed University of Engineering and Technology</span></h1>
+    <a href="https://www.facebook.com/events/881463065328393/" target="_blank"><img src="images/fb.png"></a>
+    <a href="https://www.ssuet.edu.pk/" target="_blank"><img src="images/logos/LOGO.png"></a>
+</div>
+</body>
+<script>
+    var el = document.getElementById("contact");
+    var e2 = document.getElementById("foot");
+    var e3 = document.getElementById("map");
+
+    el._originalBackgroundColor = el.style.backgroundColor;
+    e2._originalBackgroundColor = e2.style.backgroundColor;
+    e3._originalBackgroundColor = e3.style.backgroundColor;
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
+        document.getElementById("contact").style.backgroundColor = "rgba(0,0,0,0.6)";
+        document.getElementById("map").style.backgroundColor = "rgba(0,0,0,0.6)";
+        document.getElementById("foot").style.backgroundColor = "rgba(0,0,0,0.6)";
+        document.getElementsByTagName("INPUT")[0].setAttribute("style", "background-color: #545754");
+        document.getElementsByTagName("INPUT")[1].setAttribute("style", "background-color: #545754");
+        document.getElementsByTagName("SELECT")[0].setAttribute("style", "background-color: #545754");
+        document.getElementsByTagName("TEXTAREA")[0].setAttribute("style", "background-color: #545754");
+        document.getElementsByTagName("IFRAME")[0].setAttribute("style", "display: none");
+    }
+
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.body.style.backgroundColor = "#ecf0f1";
+        document.getElementsByTagName("INPUT")[0].setAttribute("style", "background-color: white");
+        document.getElementsByTagName("INPUT")[1].setAttribute("style", "background-color: white");
+        document.getElementsByTagName("SELECT")[0].setAttribute("style", "background-color: white");
+        document.getElementsByTagName("TEXTAREA")[0].setAttribute("style", "background-color: white");
+        document.getElementsByTagName("IFRAME")[0].setAttribute("style", "display: inline");
+        el.style.backgroundColor = el._originalBackgroundColor;
+        e2.style.backgroundColor = e2._originalBackgroundColor;
+        e3.style.backgroundColor = e3._originalBackgroundColor;
+    }
+</script>
+</html>

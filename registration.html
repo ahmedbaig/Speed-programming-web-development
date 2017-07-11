@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link rel="shortcut icon" href="images/logos/LOGO.png">
+</head>
+
+<body>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+    <a href="registration.html" class="active">Registration</a>
+    <a href="about.html">About</a>
+    <a href="regis.html">Already<br>registered</a>
+</div>
+
+<span onclick="openNav()" class="big">&#9776; open</span>
+
+<div class="logo" id="logo">
+    <a href="index.html"><img src="images/logos/LOGO.png" alt="logo" height="125px" width="125px"></a>
+</div>
+
+<div id="main">
+
+</div>
+<div id="foot">
+    <h1>By <br><span>Sir Syed University of Engineering and Technology</span></h1>
+    <a href="https://www.facebook.com/events/881463065328393/" target="_blank"><img src="images/fb.png"></a>
+    <a href="https://www.ssuet.edu.pk/" target="_blank"><img src="images/logos/LOGO.png"></a>
+
+</div>
+
+</body>
+<script>
+    var el = document.getElementById("main");
+    el._originalBackgroundColor = el.style.backgroundColor;
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0.6)";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
+    }
+
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.body.style.backgroundColor = "#ecf0f1";
+        el.style.backgroundColor = el._originalBackgroundColor;
+
+    }
+</script>
+</html>
